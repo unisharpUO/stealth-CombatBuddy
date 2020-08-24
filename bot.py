@@ -22,6 +22,10 @@ class Bot:
         return self._isBandaging
 
     @property
+    def IsCasting(self):
+        return self._isCasting
+
+    @property
     def AutoFollow(self):
         return self._autoFollow
 
@@ -42,6 +46,11 @@ class Bot:
             self._isBandaging = True
         elif _attributeID == '1101':
             self._isBandaging = False
+
+    def CastTo(self, _spell, _target):
+        self._isCasting = True
+        CastToObj(_spell, _target)
+        self._isCasting = False
 
     def OnSpeech(self, _text, _senderName, _senderID):
         if _senderID != self._leader and _senderID not in self._friends:
