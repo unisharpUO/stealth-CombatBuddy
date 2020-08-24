@@ -3,7 +3,7 @@ from bot import Bot
 
 
 Leader = 73030765
-Friends = [0, 1]
+Friends = [999999, 999998]
 
 
 if __name__ == '__main__':
