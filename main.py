@@ -26,12 +26,12 @@ if __name__ == '__main__':
 
         while IsPoisoned(Leader):
             if not _bot.IsBandaging and _bot.SameTile(Leader):
-                UseItemOnMobile(_bot.Bandages[0], Leader)
+                UseItemOnMobile(_bot.Bandages, Leader)
                 Wait(250)
             if GetMana(Self()) > 20:
                 CastToObj('Close Wounds', Leader)
                 Wait(1000)
 
         if GetHP(Leader) < GetMaxHP(Leader) and not _bot.IsBandaging:
-            UseItemOnMobile(_bot.Bandages[0], Leader)
+            UseItemOnMobile(_bot.Bandages, Leader)
             Wait(250)

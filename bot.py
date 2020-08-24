@@ -29,7 +29,7 @@ class Bot:
     def Bandages(self):
         if FindTypesArrayEx([0x0E21], [0xFFFF], [Backpack()], False):
             self._bandages = GetFindedList()
-        return self._bandages
+        return self._bandages[0]
 
     def SameTile(self, _target):
         if GetX(Self()) == GetX(_target) and GetY(Self()) == GetY(_target):
